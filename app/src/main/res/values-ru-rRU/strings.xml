@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Интенты</string>
+    <string name="edittext_uri">http://developer.android.com</string>
+    <string name="button_uri">Открыть Вебсайт</string>
+    <string name="edittext_loc">Кремль</string>
+    <string name="button_loc">Открыть координаты</string>
+    <string name="edittext_share">\'Это было блестяще и скользко\'</string>
+    <string name="button_share">Поделиться текстом</string>
+    <string name="enterUrlError">Введите URL-адрес</string>
+    <string name="errorLocation">Ошибка ввода</string>
+</resources>
