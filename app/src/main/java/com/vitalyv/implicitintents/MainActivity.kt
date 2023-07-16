@@ -71,12 +71,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun shareText(view:View){
-        shareTextString = binding.shareEdittext.toString()
+        shareTextString = binding.shareEdittext.text.toString()
         val mimeType = "text/plain"
-        ShareCompat.IntentBuilder.from(this).setType(mimeType)
+
+        val shareIntent = ShareCompat.IntentBuilder.from(this)
+            .setType(mimeType)
             .setChooserTitle("Share this text with: ")
             .setText(shareTextString)
-            .startChooser();
+
+        try {
+            startActivity(shareIntent.createChooserIntent())
+        } catch (e: Exception) {
+            e.printStackTrace()
+            // No app to share with
+        }
     }
 
 
